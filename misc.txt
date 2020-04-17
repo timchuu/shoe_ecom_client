@@ -1,0 +1,122 @@
+<li ><Link to='/'>Contact</Link></li>
+                        <li ><Link to='/'>Login</Link></li>
+                        <li ><Link to='/'>Register</Link></li>
+
+
+                        <Link to='/shop'>Shop Now</Link>
+
+
+
+                        <div class="grids_bottom">
+            <div class="style-grids">
+                <div class="col-md-6 style-grid style-grid-1">
+                    <img src="../../assets/images/b1.jpg" alt="shoe" />
+                </div>
+            </div>
+            <div class="col-md-6 style-grid style-grid-2">
+                <div class="style-image-1_info">
+                    <div class="style-grid-2-text_info">
+                        <h3>Nike DOWNSHIFTER</h3>
+                        <p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur.sed quia non numquam eius modi
+						tempora incidunt ut labore et dolore .</p>
+                        <div class="shop-button">
+                            <a href="shop.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="style-image-2">
+                    <img src="../../assets/images/b2.jpg" alt="shoe" />
+                    <div class="style-grid-2-text">
+                        <h3>Air force</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+---------
+other headers markup
+-----------
+<div className="banner_top innerpage" id="home">
+                <div className="wrapper_top_w3layouts">
+                    <div className="header_agileits">
+                        <div className="logo inner_page_log">
+                            <h1><a className="navbar-brand" href="index.html"><span>Downy</span> <i>Shoes</i></a></h1>
+
+                        </div>
+                        <Nav />
+                    </div>
+
+                </div>
+                <div className="services-breadcrumb_w3ls_agileinfo">
+                    <div className="inner_breadcrumb_agileits_w3">
+
+                        <ul className="short">
+                            <li><a href="index.html">Home</a><i>|</i></li>
+                            <li>Shop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+
+
+            //icon attribution
+            http://www.flaticon.com/free-icon/sushi_187463#term=sushi&page=1&position=68
+
+
+
+            // const request = axios.post(`${USER_SERVER}/login`, dataToSubmit)
+    //     .then(response => response.data)
+
+
+    // return {
+    //     type: userActionTypes.LOGIN_SUCCESS,
+    //     payload: request
+    // }
+
+
+    return async dispatch => {
+        //Return promise
+        function loginSuccess(success) {
+            dispatch({ type: userActionTypes.LOGIN_SUCCESS, payload: success })
+            return success
+        }
+
+
+        function loginFail(error) {
+            dispatch({ type: userActionTypes.LOGIN_FAIL, error })
+            return error
+        }
+
+
+
+        try {
+            const success = axios.post(`${USER_SERVER}/login`, dataToSubmit)
+            return loginSuccess(success)
+        } catch (error) {
+            return loginFail(error)
+        }
+
+
+
+    }
+
+
+     if (formIsValid) {
+            try {
+                const response = await this.props.loginUser(dataToSubmit)
+                if (response.data.loginSuccess) {
+                    this.props.history.push('/user/dashboard')
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+
+
+        } else {
+            this.setState({
+                formError: true
+            })
+        }
