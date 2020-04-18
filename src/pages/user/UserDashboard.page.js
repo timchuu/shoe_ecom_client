@@ -5,7 +5,9 @@ import UserLayout from '../../utils/Hoc/UserLayout'
 class UserDashboard extends Component {
     render() {
         return (
-            <UserLayout />
+            <div class="container-fluid">
+                <UserLayout />
+            </div>
         )
     }
 }

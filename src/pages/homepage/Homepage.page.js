@@ -36,11 +36,11 @@ const Homepage = () => {
     return (
 
         <React.Fragment>
-            <div className='banner_top' id='home'>
+            <div className='banner_top' id='home' style={{ marginTop: '50px' }}>
                 <div className="wrapper_top_w3layouts">
                     <div className='logo'>
                         <h1>
-                            <Link className='navbar-brand' to='/shop'>
+                            <Link className='navbar-brand' to='/'>
                                 <span>Downy</span>
                                 <i>Shoes</i>
                             </Link>

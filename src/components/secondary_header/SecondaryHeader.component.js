@@ -1,31 +1,28 @@
 import React from 'react'
-import Nav from '../nav/Nav.component'
-import { withRouter } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
-const SecondaryHeader = () => {
+
+const SecondaryHeader = (props) => {
+    let history = useHistory()
+    console.log(history)
     return (
         <div className="banner_top innerpage" id="home">
             <div className="wrapper_top_w3layouts">
                 <div className="header_agileits">
                     <div className="logo inner_page_log">
-                        <h1><a className="navbar-brand" href="index.html"><span>Downy</span> <i>Shoes</i></a></h1>
+                        {history.location.pathname !== '/user/dashboard' ?
+                            <h1><Link className="navbar-brand"
+                                to='/'><span>Downy</span> <i>Shoes</i></Link></h1> : null
+                        }
 
                     </div>
 
                 </div>
 
             </div>
-            <div className="services-breadcrumb_w3ls_agileinfo">
-                <div className="inner_breadcrumb_agileits_w3">
 
-                    <ul className="short">
-                        <li><a href="index.html">Home</a><i>|</i></li>
-                        <li>Shop</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     )
 }
 
-export default withRouter(SecondaryHeader)
+export default SecondaryHeader

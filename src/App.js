@@ -21,7 +21,7 @@ import Header from './components/header/MainHeader.component'
 import SecondaryHeader from './components/secondary_header/SecondaryHeader.component'
 import Nav from './components/nav/Nav.component'
 //STYLE IMPORT
-import './App.css';
+// import './App.css';
 //CSS THIRD-PARTY
 import 'tachyons'
 //TO DO: set breadcrumbs through probs
@@ -61,14 +61,15 @@ class App extends Component {
 
           <Route exact path='/' component={Homepage} />
           <HeaderLayout>
-            <Route path='/user/dashboard' component={UserDashboard} />
             <Route path='/register' component={Register} />
             <Route path='/login' component={Signin} />
             <Route path='/shop' component={Shoppage} />
             <Route path='/single' component={SinglePage} />
             <Route path='/checkout' component={CheckoutPage} />
             <Route path='/contact' component={ContactPage} />
+            <Route path='/user/dashboard' component={UserDashboard} />
           </HeaderLayout>
+
         </Switch>
       </div>
 
