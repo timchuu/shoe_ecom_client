@@ -1,15 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { toggleHiddenCart } from '../../redux/cart/cart_actions'
-import './cart_icon.css'
-import { ReactComponent as ShoppingIcon } from '../../shopping-cart.svg'
+import Icon from '@material-ui/core/Icon'
 
 
 const CartIcon = ({ toggleHiddenCart }) => {
 
     return (
-        <div className='cart-icon' onClick={toggleHiddenCart} >
-            <ShoppingIcon className='shopping-icon' />
+        <div style={{ marginTop: '15px', marginRight: '5px', cursor: 'pointer' }} onClick={toggleHiddenCart} >
+            <Icon color='secondary' style={{ fontSize: 25 }} > shopping_cart</Icon>
             <span className='item-count'></span>
         </div>
     )

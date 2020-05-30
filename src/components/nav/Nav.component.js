@@ -25,11 +25,11 @@ class Nav extends Component {
         const { isAuthenticated, user } = this.props
         const AuthLinks = (
 
-            <li class="dropdown">
-                <Link to='/shop' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{user ? `Welcome ${user.username}` : ''}<span class="caret"></span></Link>
-                <ul class="dropdown-menu">
+            <li className="dropdown">
+                <Link to='/shop' className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{user ? `Welcome ${user.username}` : ''}<span className="caret"></span></Link>
+                <ul className="dropdown-menu">
                     <li><Link to='/user/dashboard'>My Account</Link></li>
-                    <li role="separator" class="divider"></li>
+                    <li role="separator" className="divider"></li>
                     <li><a style={{ cursor: 'pointer' }} onClick={() => { this.props.onLogout(() => { this.props.history.push('/login'); console.log(this.props.history) }) }}>Log out</a></li>
                 </ul>
 
@@ -37,11 +37,11 @@ class Nav extends Component {
         )
 
         const unAuthLinks = (
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
-                <ul class="dropdown-menu">
+            <li className="dropdown">
+                <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span className="caret"></span></a>
+                <ul className="dropdown-menu">
                     <li><Link to='/login'>Login</Link></li>
-                    <li role="separator" class="divider"></li>
+                    <li role="separator" className="divider"></li>
                     <li><Link to='/register'>Register</Link></li>
                 </ul>
             </li>
@@ -64,7 +64,7 @@ class Nav extends Component {
                             <li><Link to='/shop'>Shop</Link></li>
                             <li><Link to='/contact'>Contact</Link></li>
                             {user ? AuthLinks : unAuthLinks}
-                            <li><CartIcon /></li>
+                            <li><CartIcon className='cart-icon' /></li>
                         </ul>
 
                     </div>

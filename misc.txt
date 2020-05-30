@@ -120,3 +120,48 @@ other headers markup
                 formError: true
             })
         }
+
+
+
+        <div className="col-md-4 product-men" key={i}>
+                        <div className="product-shoe-info shoe">
+                            <div className="men-pro-item">
+                                <div className='men-thumb-item'>
+                                    <img src={item.image_url} alt='myPic' />
+                                    <div className='men-cart-pro'>
+                                        <div className='inner-men-cart-pro'></div>
+                                    </div>
+                                    <span class='product-new-top'>New</span>
+                                    <div className='item-info-product'>
+                                        <h4>
+                                            <a href="single.html">{item.name}</a>
+                                        </h4>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+ <li>
+                        <input type="checkbox" className="checked" />
+                        <span className="span">Reebok</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" className="checked" />
+                        <span className="span">Nike</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" className="checked" />
+                        <span className="span">Vans</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" className="checked" />
+                        <span className="span">Adidas</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" className="checked" />
+                        <span className="span">Puma</span>
+                    </li>

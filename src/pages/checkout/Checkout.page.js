@@ -5,27 +5,7 @@ import Footer from '../../components/footer/Footer.component'
 const CheckoutPage = () => {
     return (
         <>
-            <div className="banner_top innerpage" id="home">
-                <div className="wrapper_top_w3layouts">
-                    <div className="header_agileits">
-                        <div className="logo inner_page_log">
-                            <h1><a className="navbar-brand" href="index.html"><span>Downy</span> <i>Shoes</i></a></h1>
 
-                        </div>
-                        <Nav />
-                    </div>
-
-                </div>
-                <div className="services-breadcrumb_w3ls_agileinfo">
-                    <div className="inner_breadcrumb_agileits_w3">
-
-                        <ul className="short">
-                            <li><a href="index.html">Home</a><i>|</i></li>
-                            <li>Checkout</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div className="ads-grid_shop">
                 <div className="shop_inner_inf">
                     <div className="privacy about">

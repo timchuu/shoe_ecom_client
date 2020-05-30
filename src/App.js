@@ -22,8 +22,8 @@ import SecondaryHeader from './components/secondary_header/SecondaryHeader.compo
 import Nav from './components/nav/Nav.component'
 //STYLE IMPORT
 // import './App.css';
-//CSS THIRD-PARTY
-import 'tachyons'
+
+
 //TO DO: set breadcrumbs through probs
 //TO DO: fix /user_dash.. to /user/dash...
 

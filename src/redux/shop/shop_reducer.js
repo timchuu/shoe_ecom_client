@@ -17,13 +17,19 @@ const shopReducer = (state = INIT_STATE, action) => {
             return {
                 ...state,
                 isFetching: false,
-                shopItems: action.payload
+                shopItems: action.payload.shopItems
             }
         case ShopActionTypes.FETCH_SHOP_ITEMS_FAILURE:
             return {
                 ...state,
                 isFetching: false,
                 errorMessage: action.payload
+            }
+
+        case ShopActionTypes.GET_BRANDS:
+            return {
+                ...state,
+                brands: action.payload
             }
 
         default:
